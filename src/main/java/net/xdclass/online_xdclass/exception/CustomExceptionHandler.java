@@ -23,7 +23,7 @@ public class CustomExceptionHandler {
         logger.error("[ 系统异常 ]{}",e.getMessage());
 
         if( e instanceof XDException ){
-
+              /*转成自定义异常*/
             XDException xdException = (XDException) e;
 
             return JsonData.buildError(xdException.getCode(),xdException.getMsg());
